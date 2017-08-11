@@ -1,0 +1,30 @@
+{
+	"name" : "TwitterPix",
+	"manifest_version" : 2,
+	"version" : "1.0",
+	"description" : "Modifies twitter posts to include a button to bookmark pixiv links.",
+	
+	"content_scripts" : [
+		{			
+			"run_at" : "document_end",
+			"matches" : ["https://twitter.com/*", "https://mobile.twitter.com/*"],
+			"js" : ["jquery-3.2.1.min.js" , "twitterpix.js"]
+		}
+	],
+	
+	"browser_action" : {
+		"default_popup" : "popup.html"
+	},
+	
+	"background": {
+		"persistent": false,
+		"scripts": ["jquery-3.2.1.min.js", "event.js"]
+	},
+	
+	"permissions" : [
+		"storage",
+		"tabs",
+		"https://oauth.secure.pixiv.net/auth/token/*",
+		"https://app-api.pixiv.net/*"
+	]
+}
