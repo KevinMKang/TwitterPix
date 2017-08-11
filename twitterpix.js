@@ -46,7 +46,6 @@ var markWithButton = function(val, index, list){
 			tweetContent.querySelector(".stream-item-footer").querySelector(".ProfileTweet-actionList").appendChild(createBookmarkButton(id));								
 		}
 	}
-	}
 	//console.log(tweetContent.querySelector(".js-tweet-text-container").childNodes);
 	//console.log(tweetContent.querySelector(".stream-item-footer").childNodes);	
 }
